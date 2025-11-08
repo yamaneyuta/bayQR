@@ -3,5 +3,13 @@
     "dockerComposeFile": "./compose.yml",
     "service": "dev",
     "workspaceFolder": "/workspace",
-    "remoteUser": "vscode"
+    "remoteUser": "vscode",
+    
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "24",
+            "pnpmVersion": "10.20.0"
+        }
+    }
 }
+
