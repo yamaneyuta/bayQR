@@ -1,0 +1,7 @@
+{
+    "name": "bayQR",
+    "dockerComposeFile": "./compose.yml",
+    "service": "dev",
+    "workspaceFolder": "/workspace",
+    "remoteUser": "vscode"
+}
