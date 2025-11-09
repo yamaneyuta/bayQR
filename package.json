@@ -4,5 +4,8 @@
   "packageManager": "pnpm@10.20.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.1"
   }
 }
