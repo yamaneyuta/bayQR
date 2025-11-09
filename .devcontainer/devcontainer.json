@@ -13,6 +13,15 @@
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
         "ghcr.io/devcontainers/features/python:1": {}
     },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "bierner.markdown-mermaid"
+            ]
+        }
+    },
+    
     "postCreateCommand": "bash .devcontainer/scripts/post-create-command.sh",
     "postStartCommand": "bash .devcontainer/scripts/post-start-command.sh"
 }
