@@ -1,4 +1,5 @@
 .env
+.pnpm-store/
 *.bak
 
 node_modules/
