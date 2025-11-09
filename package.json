@@ -3,7 +3,12 @@
   "version": "0.0.1",
   "packageManager": "pnpm@10.20.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "coverage": "turbo run coverage",
+    "dev": "turbo run dev"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^20.0.0",
