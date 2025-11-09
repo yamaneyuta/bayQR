@@ -1,5 +1,6 @@
 .env
 .pnpm-store/
+.turbo/
 *.bak
 
 node_modules/
