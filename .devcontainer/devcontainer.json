@@ -10,7 +10,8 @@
             "version": "24",
             "pnpmVersion": "10.20.0"
         },
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/devcontainers/features/python:1": {}
     }
 }
 
