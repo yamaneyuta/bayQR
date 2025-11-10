@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 pipx install awscli awscli-local
 
