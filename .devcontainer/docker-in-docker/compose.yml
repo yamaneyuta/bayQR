@@ -6,7 +6,9 @@ services:
     ports:
       - "4566:4566"
     environment:
-      - SERVICES=s3,lambda,dynamodb
+      # 一覧は以下で確認可能
+      # http://localhost:4566/_localstack/health
+      - SERVICES=apigateway,dynamodb,lambda,logs,s3
       - DEBUG=1
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
