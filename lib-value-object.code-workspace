@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "packages/lib-value-object"
+		},
+	],
+	"settings": {
+		"terminal.integrated.cwd": "/workspace/packages/lib-value-object",
+	}
+}
