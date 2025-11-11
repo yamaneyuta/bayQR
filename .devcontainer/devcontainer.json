@@ -1,28 +1,24 @@
 {
-    "name": "bayQR",
-    "dockerComposeFile": "./compose.yml",
-    "service": "dev",
-    "workspaceFolder": "/workspace",
-    "remoteUser": "vscode",
-    
-    "features": {
-        "ghcr.io/devcontainers/features/node:1": {
-            "version": "24",
-            "pnpmVersion": "10.20.0"
-        },
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/devcontainers/features/python:1": {}
-    },
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "dbaeumer.vscode-eslint",
-                "bierner.markdown-mermaid"
-            ]
-        }
-    },
-    
-    "postCreateCommand": "bash .devcontainer/scripts/post-create-command.sh",
-    "postStartCommand": "bash .devcontainer/scripts/post-start-command.sh"
-}
+  "name": "bayQR",
+  "dockerComposeFile": "./compose.yml",
+  "service": "dev",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "vscode",
 
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "24",
+      "pnpmVersion": "10.20.0"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "bierner.markdown-mermaid"]
+    }
+  },
+
+  "postCreateCommand": "bash .devcontainer/scripts/post-create-command.sh",
+  "postStartCommand": "bash .devcontainer/scripts/post-start-command.sh"
+}
