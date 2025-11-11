@@ -1,7 +1,7 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
-  "globalEnv": ["PROJECT_ROOT"],
+  "globalEnv": ["PROJECT_ROOT", "NODE_ENV", "CI"],
   "tasks": {
     "typecheck": {
       "dependsOn": ["^typecheck"]
@@ -11,14 +11,10 @@
       "outputs": ["dist/**"]
     },
     "test": {
-      "dependsOn": ["build"]
+      "dependsOn": ["^test"]
     },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
-    "format": {
-      "cache": false
-    },
+    "lint": {},
+    "format": {},
     "coverage": {
       "outputs": ["coverage/**"]
     },
