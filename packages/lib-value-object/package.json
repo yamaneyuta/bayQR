@@ -15,6 +15,6 @@
     "build": "run-p build:*",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
-    "format": "bash /workspace/scripts/format.sh"
+    "format": "bash ${PROJECT_ROOT}/scripts/format.sh"
   }
 }

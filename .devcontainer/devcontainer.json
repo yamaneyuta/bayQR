@@ -19,6 +19,10 @@
     }
   },
 
+  "remoteEnv": {
+    "PROJECT_ROOT": "/workspace"
+  },
+
   "postCreateCommand": "bash .devcontainer/scripts/post-create-command.sh",
   "postStartCommand": "bash .devcontainer/scripts/post-start-command.sh"
 }
