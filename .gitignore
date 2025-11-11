@@ -1,5 +1,6 @@
 .env
 *.bak
+.prettierignore
 
 .pnpm-store/
 .turbo/
