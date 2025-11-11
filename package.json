@@ -12,6 +12,8 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^20.0.0",
+    "@swc/core": "^1.15.1",
+    "@swc/jest": "^0.2.39",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.10.0",
     "commitlint": "^20.1.0",
