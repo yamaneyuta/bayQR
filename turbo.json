@@ -3,8 +3,11 @@
   "ui": "tui",
   "globalEnv": ["PROJECT_ROOT"],
   "tasks": {
+    "typecheck": {
+      "dependsOn": ["^typecheck"]
+    },
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build", "typecheck"],
       "outputs": ["dist/**"]
     },
     "test": {
