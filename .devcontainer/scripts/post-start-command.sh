@@ -2,7 +2,7 @@
 set -euo pipefail
 
 cd .devcontainer/docker-in-docker
-docker-compose up -d
+docker compose up -d
 cd -
 
 # Wait for LocalStack to be ready
