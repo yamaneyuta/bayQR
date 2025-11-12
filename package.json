@@ -6,7 +6,7 @@
     "build": "turbo run build",
     "test": "turbo run test",
     "lint": "turbo run lint",
-    "format": "turbo run format && bash ./scripts/format.sh",
+    "format": "turbo run format && bash ./scripts/format-prettier.sh",
     "coverage": "turbo run coverage",
     "dev": "turbo run dev"
   },

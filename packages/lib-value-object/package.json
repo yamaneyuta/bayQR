@@ -16,9 +16,9 @@
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "coverage": "jest --coverage",
-    "format": "bash ${PROJECT_ROOT}/scripts/format.sh",
-    "lint": "bash ${PROJECT_ROOT}/scripts/lint.sh",
+    "format": "bash ${PROJECT_ROOT}/scripts/format-prettier.sh",
+    "lint": "bash ${PROJECT_ROOT}/scripts/lint-prettier.sh",
     "test": "jest",
-    "typecheck": "bash ${PROJECT_ROOT}/scripts/typecheck.sh"
+    "typecheck": "bash ${PROJECT_ROOT}/scripts/typecheck-tsc.sh"
   }
 }
