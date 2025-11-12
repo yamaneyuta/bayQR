@@ -15,10 +15,10 @@
     "build": "run-p build:*",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
-    "coverage": "jest --coverage",
+    "coverage": "bash ${PROJECT_ROOT}/scripts/coverage-jest.sh",
     "format": "bash ${PROJECT_ROOT}/scripts/format-prettier.sh",
     "lint": "bash ${PROJECT_ROOT}/scripts/lint-prettier.sh",
-    "test": "jest",
+    "test": "bash ${PROJECT_ROOT}/scripts/test-jest.sh",
     "typecheck": "bash ${PROJECT_ROOT}/scripts/typecheck-tsc.sh"
   }
 }
