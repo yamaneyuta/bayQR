@@ -14,6 +14,7 @@ on:
 env:
   PNPM_VERSION: 10.20.0
   NODE_VERSION: 24
+  PROJECT_ROOT: ${{ github.workspace }}
 
 jobs:
   ci:
