@@ -5,7 +5,7 @@
   "scripts": {
     "build": "turbo run build",
     "test": "turbo run test",
-    "lint": "turbo run lint",
+    "lint": "turbo run lint && bash ./scripts/lint-prettier.sh",
     "format": "turbo run format && bash ./scripts/format-prettier.sh",
     "coverage": "turbo run coverage",
     "dev": "turbo run dev"
