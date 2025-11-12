@@ -1,0 +1,56 @@
+name: CI/CD
+
+on:
+  push:
+    branches-ignore:
+      - dependabot/**
+    # branches:
+    #   - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # 手動実行を許可
+
+env:
+  PNPM_VERSION: 10.20.0
+  NODE_VERSION: 24
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # @see https://github.com/pnpm/action-setup?tab=readme-ov-file#use-cache-to-reduce-installation-time
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: ${{ env.PNPM_VERSION }}
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+
+      # .turboディレクトリキャッシュ設定
+      - name: Restore turbo cache
+        id: turbo-cache
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: turbo-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            turbo-${{ runner.os }}-
+
+      # DevContainerと同様の初期化処理を実行
+      - run: bash .devcontainer/scripts/post-create-command.sh
+      - run: bash .devcontainer/scripts/post-start-command.sh
+
+      # CI
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm build
