@@ -1,6 +1,6 @@
 import { ValueObject } from "./base/ValueObject";
 
-const brand: unique symbol = Symbol("ChainIdBrand");
+const brand: unique symbol = Symbol("ChainId");
 
 export class ChainId extends ValueObject<ChainId> {
 	/** 型区別用のフィールド */
