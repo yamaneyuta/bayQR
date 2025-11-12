@@ -15,7 +15,7 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": ["dbaeumer.vscode-eslint", "bierner.markdown-mermaid"]
+      "extensions": ["dbaeumer.vscode-eslint", "bierner.markdown-mermaid", "streetsidesoftware.code-spell-checker"]
     }
   },
 
