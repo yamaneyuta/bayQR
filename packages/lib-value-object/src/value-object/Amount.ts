@@ -1,0 +1,51 @@
+import { ValueObject } from "./base/ValueObject";
+
+const brand: unique symbol = Symbol("Amount");
+
+/** 価格など、小数点以下も保持可能な数量を表すvalue-object */
+export class Amount implements ValueObject<Amount> {
+	/** 型区別用のフィールド */
+	private readonly [brand]!: void;
+
+	public readonly value: string;
+
+	private constructor(value: string) {
+		value = Amount.format(value);
+		Amount.checkAmountValue(value);
+		this.value = value;
+	}
+
+	public static from(amountValue: string): Amount {
+		return new Amount(amountValue);
+	}
+
+	public equals(other: Amount): boolean {
+		return this.value === other.value;
+	}
+
+	public toString(): string {
+		return this.value;
+	}
+
+	public isNegative(): boolean {
+		return this.value.startsWith("-");
+	}
+
+	private static format(amountValue: string): string {
+		// 小数点がある場合
+		if (amountValue.includes(".")) {
+			amountValue = amountValue
+				.replace(/0+$/, "") // 末尾の0を削除
+				.replace(/\.$/, ""); // 末尾が小数点の場合、小数点を削除
+		}
+		return amountValue;
+	}
+
+	private static checkAmountValue(amountValue: string): void {
+		// 整数または小数点を含む数字の文字列であるかどうかをチェック
+		// 例: "123", "-123", "123.45", "-123.45"
+		if (!/^-?(?:0|[1-9]\d*)(\.\d+)?$/.test(amountValue) || amountValue === "-0") {
+			throw new Error(`[53E242CB] Invalid amount value: '${amountValue}'`);
+		}
+	}
+}
