@@ -8,4 +8,4 @@ if [ -z "${CI:-}" ]; then
     OPTIONS="$OPTIONS --verbose"
 fi
 
-pnpm jest $OPTIONS
+pnpm jest $OPTIONS "$@"

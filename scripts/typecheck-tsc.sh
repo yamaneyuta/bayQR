@@ -12,4 +12,4 @@ else
     exit 1
 fi
 
-pnpm exec tsc --noEmit --strict --skipLibCheck -p "$PROJECT"
+pnpm exec tsc --noEmit --strict --skipLibCheck -p "$PROJECT" "$@"
