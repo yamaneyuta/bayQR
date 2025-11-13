@@ -13,7 +13,7 @@ export class ChainId implements ValueObject<ChainId> {
 	}
 
 	public static from(chainIdValue: number): ChainId {
-		return new ChainId(chainIdValue);
+		return new this(chainIdValue);
 	}
 
 	public get value(): number {

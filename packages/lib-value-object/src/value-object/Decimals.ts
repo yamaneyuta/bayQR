@@ -14,7 +14,7 @@ export class Decimals implements ValueObject<Decimals> {
 	}
 
 	public static from(decimalsValue: number): Decimals {
-		return new Decimals(decimalsValue);
+		return new this(decimalsValue);
 	}
 
 	public get value(): number {

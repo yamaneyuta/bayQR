@@ -16,7 +16,7 @@ export class Amount implements ValueObject<Amount> {
 	}
 
 	public static from(amountValue: string): Amount {
-		return new Amount(amountValue);
+		return new this(amountValue);
 	}
 
 	public equals(other: Amount): boolean {
