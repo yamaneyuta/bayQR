@@ -4,6 +4,7 @@
 
 .pnpm-store/
 .turbo/
+.VSCodeCounter
 coverage/
 dist/
 node_modules/

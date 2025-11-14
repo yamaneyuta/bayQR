@@ -19,7 +19,8 @@
         "dbaeumer.vscode-eslint",
         "bierner.markdown-mermaid",
         "streetsidesoftware.code-spell-checker",
-        "ms-vscode.live-server"
+        "ms-vscode.live-server",
+        "uctakeoff.vscode-counter"
       ]
     }
   },
