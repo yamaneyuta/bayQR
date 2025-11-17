@@ -9,7 +9,7 @@ export class HttpUrl implements ValueObject<HttpUrl> {
 
 	public readonly value: string;
 
-	private constructor(urlValue: string) {
+	protected constructor(urlValue: string) {
 		HttpUrl.checkUrl(urlValue);
 		this.value = urlValue;
 	}
