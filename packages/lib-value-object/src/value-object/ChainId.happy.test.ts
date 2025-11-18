@@ -1,7 +1,7 @@
 import { ChainId } from "./ChainId";
 
 describe("[Happy] ChainId", () => {
-	test("[DDCB159F] from", async () => {
+	test("[DDCB159F] from", () => {
 		// ACT
 		const chainId = ChainId.from(42);
 
@@ -9,7 +9,7 @@ describe("[Happy] ChainId", () => {
 		expect(chainId.value).toBe(42);
 	});
 
-	test("[B216D2B7] toString", async () => {
+	test("[B216D2B7] toString", () => {
 		// ARRANGE
 		const sut = ChainId.from(42);
 
@@ -20,7 +20,7 @@ describe("[Happy] ChainId", () => {
 		expect(str).toBe("42");
 	});
 
-	test("[384DA641] equals", async () => {
+	test("[384DA641] equals", () => {
 		// ARRANGE
 		const sut1 = ChainId.from(42);
 		const sut2 = ChainId.from(42);

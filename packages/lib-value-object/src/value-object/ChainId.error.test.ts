@@ -8,7 +8,7 @@ describe("[Error] ChainId", () => {
 		{ chainIdValue: Infinity },
 		{ chainIdValue: -42 },
 	];
-	test.each(dataset)(`[DDCB159F] from - $chainIdValue`, async ({ chainIdValue }) => {
+	test.each(dataset)(`[DDCB159F] from - $chainIdValue`, ({ chainIdValue }) => {
 		// ACT & ASSERT
 		expect(() => ChainId.from(chainIdValue)).toThrow(`[19364922]`);
 	});

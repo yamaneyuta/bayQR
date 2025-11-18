@@ -1,1 +1,9 @@
+export { Address } from "./value-object/Address";
+export { Amount } from "./value-object/Amount";
+export { BlockExplorerUrl } from "./value-object/BlockExplorerUrl";
 export { ChainId } from "./value-object/ChainId";
+export { ChainName } from "./value-object/ChainName";
+export { Decimals } from "./value-object/Decimals";
+export { HttpUrl } from "./value-object/HttpUrl";
+export { Symbol } from "./value-object/Symbol";
+export { TokenAmount } from "./value-object/TokenAmount";
