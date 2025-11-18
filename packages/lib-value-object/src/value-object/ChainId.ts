@@ -4,7 +4,7 @@ const brand: unique symbol = Symbol("ChainId");
 
 export class ChainId implements ValueObject<ChainId> {
 	/** 型区別用のフィールド */
-	private [brand]!: void;
+	private readonly [brand]!: void;
 
 	private constructor(private readonly chainIdValue: number) {
 		if (chainIdValue <= 0 || !Number.isInteger(chainIdValue)) {
