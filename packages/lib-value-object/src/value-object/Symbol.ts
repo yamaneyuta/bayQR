@@ -1,23 +1,24 @@
-import { SymbolBrand as brand } from "./SymbolBrand";
 import { ValueObject } from "./base/ValueObject";
 
+const brand: unique symbol = Symbol("Symbol");
+
 /** 通貨記号を表すvalue-object */
-export class Symbol implements ValueObject<Symbol> {
+class MySymbol implements ValueObject<MySymbol> {
 	/** 型区別用のフィールド */
 	private readonly [brand]!: void;
 
 	public readonly value: string;
 
 	private constructor(symbolValue: string) {
-		Symbol.checkSymbol(symbolValue);
+		MySymbol.checkSymbol(symbolValue);
 		this.value = symbolValue;
 	}
 
-	public static from(symbolValue: string): Symbol {
+	public static from(symbolValue: string): MySymbol {
 		return new this(symbolValue);
 	}
 
-	public equals(other: Symbol): boolean {
+	public equals(other: MySymbol): boolean {
 		return this.value === other.value;
 	}
 
@@ -26,7 +27,7 @@ export class Symbol implements ValueObject<Symbol> {
 	}
 
 	private static checkSymbol(symbolValue: string): void {
-		if (!Symbol.isSymbol(symbolValue)) {
+		if (!MySymbol.isSymbol(symbolValue)) {
 			throw new Error(`[68A91582] Invalid symbol value: '${symbolValue}'`);
 		}
 	}
@@ -35,3 +36,4 @@ export class Symbol implements ValueObject<Symbol> {
 		return symbolValue.length > 0 && symbolValue.trim() === symbolValue;
 	}
 }
+export { MySymbol as Symbol };
